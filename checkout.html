@@ -14,52 +14,150 @@
 
   <!-- NAVBAR e HEADER -->
 
-   <main class="my-5">
-    <div class="container">
-      <div class="row g-5 justify-content-center">
-        <!-- Formulário de dados -->
-        <div class="col-md-7">
-          <div class="card checkout-card p-4">
-            <h4 class="mb-4">Informações de Entrega</h4>
-            <form>
-              <div class="mb-3">
-                <label for="nome" class="form-label">Nome completo</label>
-                <input type="text" class="form-control" id="nome" required>
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" required>
-              </div>
-              <div class="mb-3">
-                <label for="endereco" class="form-label">Endereço</label>
-                <input type="text" class="form-control" id="endereco" required>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="cidade" class="form-label">Cidade</label>
-                  <input type="text" class="form-control" id="cidade" required>
+   <div class="py-5">
+        <div class="container">
+            <main>
+                <div class="py-5 text-center">
+                    <h2>Finalizar Compra</h2>
+                    <p class="lead">Preencha os dados abaixo para concluir seu pedido.</p>
                 </div>
-                <div class="col-md-3 mb-3">
-                  <label for="estado" class="form-label">Estado</label>
-                  <input type="text" class="form-control" id="estado" required>
+
+                <div class="row g-5">
+                    <div class="col-md-5 col-lg-4 order-md-last">
+                        <h4 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-primary">Seu carrinho</span>
+                            <span class="badge bg-primary rounded-pill">3</span>
+                        </h4>
+                        <ul class="list-group mb-3">
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 class="my-0">Produto Exemplo</h6>
+                                    <small class="text-muted">Descrição breve</small>
+                                </div>
+                                <span class="text-muted">R$120</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Total (BRL)</span>
+                                <strong>R$120</strong>
+                            </li>
+                        </ul>
+
+                        <form class="card p-2">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Código promocional">
+                                <button type="submit" class="btn btn-secondary">Aplicar</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-md-7 col-lg-8">
+                        <h4 class="mb-3">Endereço de cobrança</h4>
+                        <form class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="firstName" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                    <div class="invalid-feedback">Nome é obrigatório.</div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="lastName" class="form-label">Sobrenome</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                                    <div class="invalid-feedback">Sobrenome é obrigatório.</div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="voce@exemplo.com">
+                                    <div class="invalid-feedback">Informe um email válido.</div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="address" class="form-label">Endereço</label>
+                                    <input type="text" class="form-control" id="address" required>
+                                    <div class="invalid-feedback">Informe seu endereço.</div>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <label for="country" class="form-label">País</label>
+                                    <select class="form-select" id="country" required>
+                                        <option value="">Escolha...</option>
+                                        <option>Brasil</option>
+                                    </select>
+                                    <div class="invalid-feedback">Selecione um país válido.</div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="state" class="form-label">Estado</label>
+                                    <select class="form-select" id="state" required>
+                                        <option value="">Escolha...</option>
+                                        <option>SP</option>
+                                        <option>RJ</option>
+                                        <option>MG</option>
+                                        <!-- outros estados -->
+                                    </select>
+                                    <div class="invalid-feedback">Selecione um estado válido.</div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="zip" class="form-label">CEP</label>
+                                    <input type="text" class="form-control" id="zip" placeholder="" required>
+                                    <div class="invalid-feedback">Informe o CEP.</div>
+                                </div>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <h4 class="mb-3">Pagamento</h4>
+                            <div class="my-3">
+                                <div class="form-check">
+                                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                                    <label class="form-check-label" for="credit">Cartão de crédito</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                                    <label class="form-check-label" for="debit">Cartão de débito</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="pix" name="paymentMethod" type="radio" class="form-check-input" required>
+                                    <label class="form-check-label" for="pix">PIX</label>
+                                </div>
+                            </div>
+
+                            <div class="row gy-3">
+                                <div class="col-md-6">
+                                    <label for="cc-name" class="form-label">Nome no cartão</label>
+                                    <input type="text" class="form-control" id="cc-name" required>
+                                    <div class="invalid-feedback">Nome no cartão é obrigatório</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="cc-number" class="form-label">Número do cartão</label>
+                                    <input type="text" class="form-control" id="cc-number" required>
+                                    <div class="invalid-feedback">Número do cartão é obrigatório</div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="cc-expiration" class="form-label">Validade</label>
+                                    <input type="text" class="form-control" id="cc-expiration" required>
+                                    <div class="invalid-feedback">Data de validade obrigatória</div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="cc-cvv" class="form-label">CVV</label>
+                                    <input type="text" class="form-control" id="cc-cvv" required>
+                                    <div class="invalid-feedback">Código de segurança é obrigatório</div>
+                                </div>
+                            </div>
+
+                            <hr class="my-4">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Finalizar Pedido</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="col-md-3 mb-3">
-                  <label for="cep" class="form-label">CEP</label>
-                  <input type="text" class="form-control" id="cep" required>
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="pagamento" class="form-label">Forma de pagamento</label>
-                <select class="form-select" id="pagamento" required>
-                  <option selected disabled>Escolha...</option>
-                  <option>Cartão de Crédito</option>
-                  <option>Pix</option>
-                  <option>Boleto Bancário</option>
-                </select>
-              </div>
-            </form>
-          </div>
+            </main>
         </div>
+    </div>
 
 
   <footer class="bg-dark text-light text-center py-4">
