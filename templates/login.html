@@ -1,0 +1,67 @@
+ <!-- Aluno 1: Giovana Libania Martins Ticianelli
+            Aluno 2: Maria Luiza Souza
+            Aluno 3: Mylena de Jesus-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header class="bg-orange py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <img src="img/logo.png" alt="Logo" style="height: 100px;" />
+            <nav class="navbar navbar-expand-lg navbar-dark bg-marrom">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                            <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+                            <li class="nav-item"><a class="nav-link" href="carrinho.html">Carrinho</a></li>
+                            <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="mb-0">Login</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="login-form">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="password" required />
+                            </div>
+                            <button type="submit" class="btn btn-primary">Entrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-4">
+        <p class="mb-0">© 2024 Protótipo Ecommerce</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

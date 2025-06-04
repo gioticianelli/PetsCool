@@ -1,0 +1,44 @@
+.bg-marrom {
+            background-color: #8f5e1a;
+            /* marrom escuro estilo "saddle brown" */
+        }
+ 
+        body {
+            background-color: #9c7134ea;
+            ;
+        }
+ 
+        .bg-orange {
+            background-color: #553a15;
+        }
+ 
+        .navbar-nav .nav-link {
+            transition: all 0.3s;
+        }
+ 
+        .navbar-nav .nav-link:hover {
+            transform: translateY(-2px);
+        }
+ 
+        .product-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 1.5rem;
+        }
+ 
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+ 
+        .product-image {
+            height: 200px;
+            object-fit: contain;
+            padding: 15px;
+        }
+ 
+        .price {
+            color: #111111;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+    
