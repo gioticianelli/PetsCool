@@ -1,19 +1,22 @@
- <!-- Aluno 1: Giovana Libania Martins Ticianelli
+<!-- Aluno 1: Giovana Libania Martins Ticianelli
             Aluno 2: Maria Luiza Souza
             Aluno 3: Mylena de Jesus-->
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Checkout</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-  <header>
-    <section class="header-main py-3 bg-orange">
+    <header>
+        <section class="header-main py-3 bg-orange">
             <div class="container">
                 <div class="row align-items-center g-3">
                     <div class="col-lg-3">
@@ -35,7 +38,8 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li><a class="dropdown-item" href="login.html" data-page="login">Login</a></li>
-                                <li><a class="dropdown-item" href="cadastro.html" data-page="cadastro">Cadastrar</a></li>
+                                <li><a class="dropdown-item" href="cadastro.html" data-page="cadastro">Cadastrar</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -43,12 +47,12 @@
             </div>
         </section>
     </header>
- 
+
     <!-- NAVBAR -->
- 
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-marrom">
- 
- 
+
+
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
                 <span class="navbar-toggler-icon"></span>
@@ -56,13 +60,13 @@
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="catalogo.html" data-page="catalog">Produtos</a>
+                        <a class="nav-link active" href="index.html" data-page="catalog">Produtos</a>
                     </li>
- 
+
                     <li class="nav-item">
                         <a class="nav-link" href="carrinho.html" data-page="cart">Carrinho</a>
                     </li>
- 
+
                     <li class="nav-item">
                         <a class="nav-link" href="checkout.html" data-page="checkout">Checkout</a>
                     </li>
@@ -71,7 +75,7 @@
         </div>
     </nav>
 
-   <div class="py-5">
+    <div class="py-5">
         <div class="container">
             <main>
                 <div class="py-5 text-center">
@@ -81,30 +85,30 @@
 
                 <div class="row g-5">
                     <div class="col-md-5 col-lg-4 order-md-last">
-                        <h4 class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="text-primary">Seu carrinho</span>
-                            <span class="badge bg-primary rounded-pill">3</span>
-                        </h4>
-                        <ul class="list-group mb-3">
-                            <li class="list-group-item d-flex justify-content-between lh-sm">
-                                <div>
-                                    <h6 class="my-0">Produto Exemplo</h6>
-                                    <small class="text-muted">Descrição breve</small>
-                                </div>
-                                <span class="text-muted">R$120</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between">
-                                <span>Total (BRL)</span>
-                                <strong>R$120</strong>
-                            </li>
-                        </ul>
-
-                        <form class="card p-2">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Código promocional">
-                                <button type="submit" class="btn btn-secondary">Aplicar</button>
+                        <div class="container my-5">
+                            <h2 class="mb-4">Seu Carrinho</h2>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Produto</th>
+                                        <th>Preço</th>
+                                        <th>Qtd</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Produto Exemplo</td>
+                                        <td>R$ 59,90</td>
+                                        <td><input type="number" value="1" min="1" class="form-control" /></td>
+                                        <td>R$ 59,90</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="text-end total">
+                                <strong>Total: R$ 59,90</strong>
                             </div>
-                        </form>
+                        </div>
                     </div>
 
                     <div class="col-md-7 col-lg-8">
@@ -113,13 +117,15 @@
                             <div class="row g-3">
                                 <div class="col-sm-6">
                                     <label for="firstName" class="form-label">Nome</label>
-                                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                    <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                                        required>
                                     <div class="invalid-feedback">Nome é obrigatório.</div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <label for="lastName" class="form-label">Sobrenome</label>
-                                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                                    <input type="text" class="form-control" id="lastName" placeholder="" value=""
+                                        required>
                                     <div class="invalid-feedback">Sobrenome é obrigatório.</div>
                                 </div>
 
@@ -168,11 +174,13 @@
                             <h4 class="mb-3">Pagamento</h4>
                             <div class="my-3">
                                 <div class="form-check">
-                                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input"
+                                        checked required>
                                     <label class="form-check-label" for="credit">Cartão de crédito</label>
                                 </div>
                                 <div class="form-check">
-                                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input"
+                                        required>
                                     <label class="form-check-label" for="debit">Cartão de débito</label>
                                 </div>
                                 <div class="form-check">
@@ -208,7 +216,8 @@
                             </div>
 
                             <hr class="my-4">
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Finalizar Pedido</button>
+                            <button class="btn btn-primary btn-lg btn-block" type="submit"
+                                onclick="aletFinalizou()">Finalizar Pedido</button>
                         </form>
                     </div>
                 </div>
@@ -217,10 +226,14 @@
     </div>
 
 
-  <footer class="bg-dark text-light text-center py-4">
-    <p class="mb-0">© 2024 Protótipo Ecommerce</p>
-  </footer>
+    <footer class="bg-dark text-light text-center py-4">
+        <p class="mb-0">© 2024 Protótipo Ecommerce</p>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script_checkout.js"></script>
+    <script src="js/script_carrinho.js"></script>
+
 </body>
+
 </html>
