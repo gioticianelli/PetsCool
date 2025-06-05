@@ -17,7 +17,7 @@ function adicionarAoCarrinho(nome, preco) {
 }
 
 function configurarBotoesComprar() {
-    const botoes = document.querySelectorAll('.btn.btn-primary');
+    const botoes = document.querySelectorAll('.btn-primary');
     if (botoes.length === 0) return; // Verifica se há botões
 
     botoes.forEach(botao => {
@@ -74,8 +74,21 @@ function escutarMudancaQuantidade() {
     });
 }
 
+function limparCarrinho() {
+    if (confirm("Tem certeza que deseja limpar o carrinho?")) {
+        localStorage.removeItem('carrinho');
+        carrinho.length = 0; // esvazia o array sem trocar referência
+        mostrarCarrinho();
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    configurarBotoesComprar();     // só funciona se tiver produtos na página
-    mostrarCarrinho();            // só funciona se for a página do carrinho
-    escutarMudancaQuantidade();   // permite alterar quantidades direto no input
+    configurarBotoesComprar();     
+    mostrarCarrinho();            
+    escutarMudancaQuantidade();   
+
+    const btnLimpar = document.getElementById('limparCarrinho');
+    if (btnLimpar) {
+        btnLimpar.addEventListener('click', limparCarrinho);
+    }
 });

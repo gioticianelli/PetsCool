@@ -1,0 +1,29 @@
+.bg-marrom {
+    background-color: #8f5e1a;
+    /* marrom escuro estilo "saddle brown" */
+}
+
+body {
+    background-color: #9c7134ea;
+    ;
+}
+
+.bg-orange {
+    background-color: #553a15;
+}
+
+.navbar-nav .nav-link {
+    transition: all 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: translateY(-2px);
+}
+
+main {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #8b5e3c; 
+}
